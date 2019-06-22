@@ -36,7 +36,8 @@ const Header = ({ siteTitle }) => (
 
 const StyledHeader = styled.header`
   background-color: ${props => props.theme.$swatch_4};
-  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.1);
+  padding-left: 1rem;
+  padding-right: 1rem;
   height: ${props => props.theme.headerHeight};
   display: flex;
   align-items: center;
@@ -49,7 +50,7 @@ const StyledHeader = styled.header`
   }
   a {
     text-decoration: none;
-    font-weight: 800;
+    font-weight: 600;
 
     &:hover {
       color: ${props => props.theme.accent1};

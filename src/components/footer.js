@@ -39,10 +39,11 @@ const Footer = () => (
 
 const StyledFooter = styled.footer`
   background-color: ${props => props.theme.$swatch_4};
-  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2);
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  height: ${props => props.theme.footerHeight};
+  /*height: ${props => props.theme.footerHeight};*/
   svg {
     width: 2rem;
     height: 2rem;
