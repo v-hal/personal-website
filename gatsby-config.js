@@ -3,6 +3,11 @@ module.exports = {
     title: `Ville Halminen`,
     description: ``,
     author: `Ville Halminen`,
+    linkedin: 'https://www.linkedin.com/in/villehalminen/',
+    twitter: 'https://twitter.com/villehalminen',
+    github: 'https://github.com/v-hal',
+    email: 'ville.halminen@gmail.com',
+    medium: 'https://medium.com/@Zepro',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -39,6 +44,13 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+      options: {
+        analyzerPort: 3000,
+        production: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

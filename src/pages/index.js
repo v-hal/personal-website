@@ -34,9 +34,9 @@ const IndexPage = () => (
               in different industries.
             </p>
             <p>
-              I’m currently working on a web application built with TypeScript,
-              Gatsby.js, React, and Node.js. In my projects, I usually do
-              front-end and back-end development, as well as DevOps.
+              I’m currently working on web applications built with TypeScript,
+              Gatsby.js, React, GraphQL, and Node.js. In my projects, I usually
+              do front-end and back-end development, as well as DevOps.
             </p>
             <p>
               Feel free to contact me by email at{' '}

@@ -2,6 +2,11 @@ import { createGlobalStyle } from 'styled-components';
 import styleVariables from './variables';
 
 export default createGlobalStyle`
+
+  body {
+    background-color: ${props => props.theme.$swatch_4};
+  }
+
   body, html, p, a {
     font-family: ${styleVariables.fontFamily};
     font-size: 1.1rem;
