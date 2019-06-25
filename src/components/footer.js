@@ -93,6 +93,12 @@ const StyledLinkButton = styled(LinkButton)`
   background-color: ${props => props.theme.$swatch_4};
   display: flex;
   margin-right: 1rem;
+  transition: background-color 0.2s linear;
+
+  svg > path {
+    transition: fill 0.2s linear;
+  }
+
   &:hover {
     svg > path {
       fill: ${props => props.theme.accent1};

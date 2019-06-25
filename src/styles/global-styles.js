@@ -14,6 +14,12 @@ export default createGlobalStyle`
     color: ${props => props.theme.mainGray};
   }
 
+  a {
+    &:hover {
+      color: ${props => props.theme.accent1};
+    }
+  }
+
   main {
     min-height: calc(100vh - ${props => props.theme.headerHeight} - ${props =>
   props.theme.footerHeight})

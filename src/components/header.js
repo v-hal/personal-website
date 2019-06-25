@@ -49,8 +49,13 @@ const StyledHeader = styled.header`
     margin-bottom: 0;
   }
   a {
+    transition: color 0.2s linear;
     text-decoration: none;
     font-weight: 600;
+
+    svg > path {
+      transition: fill 0.2s linear;
+    }
 
     &:hover {
       color: ${props => props.theme.accent1};
@@ -65,7 +70,8 @@ const MenuLink = styled(Link)`
   color: #585858;
   text-decoration: none;
   &:hover {
-    text-decoration: underline;
+    opacity: 1;
+    text-decoration: none;
   }
 `;
 
