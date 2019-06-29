@@ -4,14 +4,25 @@ import styleVariables from './variables';
 export default createGlobalStyle`
 
   body {
-    background-color: ${props => props.theme.$swatch_4};
+    /* background-color: ${props => props.theme.$swatch_4}; */
   }
+
+  html {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+  } 
+  
 
   body, html, p, a {
     font-family: ${styleVariables.fontFamily};
     font-size: 1.1rem;
-    line-height: 1.7rem;
+    font-weight: 400;
+    line-height: 2rem;
     color: ${props => props.theme.mainGray};
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: ${styleVariables.headingFontFamily};
   }
 
   a {
@@ -21,7 +32,7 @@ export default createGlobalStyle`
   }
 
   main {
-    min-height: calc(100vh - ${props => props.theme.headerHeight} - ${props =>
+    min-height: calc(99vh - ${props => props.theme.headerHeight} - ${props =>
   props.theme.footerHeight})
   }
 

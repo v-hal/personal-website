@@ -4,6 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import SVG from 'react-inlinesvg';
 import { Grid, Row, Col, Typography, Breakpoint } from '@smooth-ui/core-sc';
+import styleVariables from '../styles/variables';
 const logo = require('../images/logo2.svg');
 
 const Header = ({ siteTitle }) => (
@@ -20,14 +21,14 @@ const Header = ({ siteTitle }) => (
             </MenuLink>
           </Typography>
         </HeaderCol>
-        <HeaderCol>
+        {/* <HeaderCol>
           <MenuLink to="/">Posts</MenuLink>
-        </HeaderCol>
+        </HeaderCol> */}
         <HeaderCol>
           <MenuLink to="/cv">CV</MenuLink>
         </HeaderCol>
         <HeaderCol>
-          <MenuLink to="/">About</MenuLink>
+          <MenuLink to="/about">About</MenuLink>
         </HeaderCol>
       </Row>
     </Grid>
@@ -35,9 +36,11 @@ const Header = ({ siteTitle }) => (
 );
 
 const StyledHeader = styled.header`
-  background-color: ${props => props.theme.$swatch_4};
+  /* background-color: ${props => props.theme.$swatch_4}; */
+  font-family: ${styleVariables.headingFontFamily};
   padding-left: 1rem;
   padding-right: 1rem;
+  box-sizing: border-box;
   height: ${props => props.theme.headerHeight};
   display: flex;
   align-items: center;
@@ -90,7 +93,7 @@ const HeaderCol = styled(Col)`
     props.left ||
     `
     justify-content: center;
-  `}
+  `};
 `;
 
 const LogoAndTitle = styled.div`

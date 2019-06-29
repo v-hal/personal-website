@@ -221,8 +221,8 @@ const CV = () => (
                   <ul>
                     <li>Haaga-Helia University of Applied Sciences</li>
                     <li>
-                      Bachelor of Business Administration (BBA), Business
-                      Information Technology
+                      Bachelor of Business Administration, Business Information
+                      Technology
                     </li>
                     <li className="small">2010 – 2013</li>
                   </ul>

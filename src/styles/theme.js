@@ -27,7 +27,7 @@ export default {
   gridMaxWidths: {
     sm: '540px',
     md: '720px',
-    lg: '960px',
-    xl: '960px',
+    lg: '800px',
+    xl: '800px',
   },
 };

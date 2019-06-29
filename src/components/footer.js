@@ -77,10 +77,12 @@ const Footer = () => (
 );
 
 const StyledFooter = styled.footer`
+  box-sizing: border-box;
+  height: ${props => props.theme.footerHeight};
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   /*height: ${props => props.theme.footerHeight};*/
   svg {
     width: 2rem;
@@ -94,7 +96,7 @@ const StyledLinkButton = styled(LinkButton)`
   display: flex;
   margin-right: 1rem;
   transition: background-color 0.2s linear;
-
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   svg > path {
     transition: fill 0.2s linear;
   }
@@ -108,11 +110,11 @@ const StyledLinkButton = styled(LinkButton)`
 
 const SocialMediaTitle = styled(Typography)`
   font-weight: 900;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 `;
 
 const Copy = styled.span`
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 `;
 
 const FooterCol = styled(Col)`

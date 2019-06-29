@@ -1,5 +1,6 @@
 export default {
-  fontFamily: 'Source Sans Pro, Helvetica, sans-serif',
+  headingFontFamily: 'Source Sans Pro, Helvetica, sans-serif',
+  fontFamily: 'Raleway, sans-serif',
   headerHeight: '5rem',
-  footerHeight: '15rem',
+  footerHeight: '12rem',
 };

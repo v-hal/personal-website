@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 const Main = ({ children }) => <StyledMain>{children}</StyledMain>;
 
 const StyledMain = styled.main`
+  box-sizing: border-box;
   background-color: white;
   padding-left: 1rem;
   padding-right: 1rem;

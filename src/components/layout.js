@@ -38,6 +38,10 @@ const Layout = ({ children }) => (
               rel="stylesheet"
             />
             <link
+              href="https://fonts.googleapis.com/css?family=Raleway:400,600,700"
+              rel="stylesheet"
+            />
+            <link
               rel="apple-touch-icon"
               sizes="180x180"
               href="/apple-touch-icon.png"

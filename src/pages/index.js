@@ -10,7 +10,7 @@ const IndexPage = () => (
     <Grid>
       <Row>
         <Col>
-          <header>
+          <div>
             <p />
             <h1>Hi!</h1>
             <p>
@@ -74,7 +74,7 @@ const IndexPage = () => (
               .
             </p>
             <p />
-          </header>
+          </div>
         </Col>
       </Row>
     </Grid>
