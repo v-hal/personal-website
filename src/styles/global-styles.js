@@ -8,9 +8,8 @@ export default createGlobalStyle`
   }
 
   html {
-    margin-left: calc(100vw - 100%);
-    margin-right: 0;
-  } 
+    overflow-y: scroll;
+ } 
   
 
   body, html, p, a {
