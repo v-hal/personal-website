@@ -34,14 +34,6 @@ const Layout = ({ children }) => (
           <GlobalStyles />
           <Helmet>
             <link
-              href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700"
-              rel="stylesheet"
-            />
-            <link
-              href="https://fonts.googleapis.com/css?family=Raleway:400,600,700"
-              rel="stylesheet"
-            />
-            <link
               rel="apple-touch-icon"
               sizes="180x180"
               href="/apple-touch-icon.png"
@@ -70,6 +62,14 @@ const Layout = ({ children }) => (
           <Header siteTitle={data.site.siteMetadata.title} />
           <Main>{children}</Main>
           <Footer />
+          <link
+            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Raleway:400,600,700"
+            rel="stylesheet"
+          />
         </>
       </ThemeProvider>
     )}
