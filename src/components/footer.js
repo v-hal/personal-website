@@ -81,7 +81,7 @@ const StyledFooter = styled.footer`
   height: ${props => props.theme.footerHeight};
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 1.5rem;
+  padding-top: 3.5rem;
   padding-bottom: 1.5rem;
   /*height: ${props => props.theme.footerHeight};*/
   svg {

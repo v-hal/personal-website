@@ -5,20 +5,17 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 
 const SecondPage = props => {
-  console.log(props);
   return (
     <Layout>
-      <SEO title="Page two" />
+      <SEO title={props.data.markdownRemark.frontmatter.title} />
       <Grid>
         <Row>
           <Col>
-            <h1>{props.data.markdownRemark.frontmatter.title}</h1>
             <div
               dangerouslySetInnerHTML={{
                 __html: props.data.markdownRemark.html,
               }}
             ></div>
-            <Link to="/">Go back to the homepage</Link>
           </Col>
         </Row>
       </Grid>

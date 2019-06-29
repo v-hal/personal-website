@@ -1,6 +1,6 @@
 ---
 title: Test post title
-slug: /test-post/
+slug: test-post
 date: '2019-05-05'
 ---
 
