@@ -1,8 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
+import SVG from 'react-inlinesvg';
 import { Grid, Row, Col } from '@smooth-ui/core-sc';
 import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+const illustration1 = require('../images/svg/undraw_coffee_break.svg');
 
 const IndexPage = () => (
   <Layout>
@@ -11,6 +14,7 @@ const IndexPage = () => (
       <Row>
         <Col>
           <h1>About</h1>
+          <Illustration src={illustration1} />
           <p>
             This site is a personal website built with{' '}
             <a
@@ -58,5 +62,15 @@ const IndexPage = () => (
     </Grid>
   </Layout>
 );
+
+const Illustration = styled(SVG)`
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-height: 20rem;
+  display: flex;
+  svg {
+    max-height: 20rem;
+  }
+`;
 
 export default IndexPage;

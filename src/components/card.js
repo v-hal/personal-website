@@ -79,7 +79,8 @@ const StyledCard = styled.article`
 const ImageCol = styled(Col)`
   height: 200px;
   padding-left: 0;
-  padding-right: 0.9rem;
+  padding-right: 0;
+
   img {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
