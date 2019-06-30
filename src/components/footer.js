@@ -5,8 +5,7 @@ import LogoTwitter from 'react-ionicons/lib/LogoTwitter';
 import LogoLinkedin from 'react-ionicons/lib/LogoLinkedin';
 import LogoGithub from 'react-ionicons/lib/LogoGithub';
 import Mail from 'react-ionicons/lib/MdMail';
-import { StaticQuery } from 'gatsby';
-
+import { StaticQuery, graphql } from 'gatsby';
 const LinkButton = Button.withComponent('a');
 
 const Footer = () => (

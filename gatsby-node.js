@@ -1,11 +1,4 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
-// You can delete this file if you're not using it
-
+const { addLeadingSlash } = require('./src/utils/url');
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
@@ -44,10 +37,10 @@ exports.createPages = ({ graphql, actions }) => {
       const next = index === 0 ? null : (posts[index - 1] || {}).node;
 
       createPage({
-        path: `/posts/${post.frontmatter.slug}`,
+        path: `${addLeadingSlash(post.frontmatter.slug)}`,
         component: blogPost,
         context: {
-          slug: `/${post.frontmatter.slug}/`,
+          slug: post.frontmatter.slug,
           previous,
           next,
         },

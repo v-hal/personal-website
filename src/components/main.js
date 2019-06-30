@@ -9,6 +9,9 @@ const StyledMain = styled.main`
   background-color: white;
   padding-left: 1rem;
   padding-right: 1rem;
+  .sui-grid {
+    box-sizing: border-box;
+  }
 `;
 
 Main.propTypes = { children: PropTypes.node.isRequired };

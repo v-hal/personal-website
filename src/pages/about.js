@@ -51,7 +51,7 @@ const IndexPage = () => (
           </p>
           <p>
             Read more about me and what I do on the{' '}
-            <Link href="/">home page</Link>.
+            <Link to="/">home page</Link>.
           </p>
         </Col>
       </Row>

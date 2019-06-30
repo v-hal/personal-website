@@ -21,9 +21,9 @@ const Header = ({ siteTitle }) => (
             </MenuLink>
           </Typography>
         </HeaderCol>
-        {/* <HeaderCol>
-          <MenuLink to="/">Posts</MenuLink>
-        </HeaderCol> */}
+        <HeaderCol>
+          <MenuLink to="/posts">Blog</MenuLink>
+        </HeaderCol>
         <HeaderCol>
           <MenuLink to="/cv">CV</MenuLink>
         </HeaderCol>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import { Grid, Row, Col } from '@smooth-ui/core-sc';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -32,7 +32,7 @@ export const query = graphql`
         author
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
       html

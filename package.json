@@ -3,7 +3,7 @@
   "private": true,
   "description": "Personal website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Ville Halminen <ville.halminen@gmail.com>",
   "dependencies": {
     "@smooth-ui/core-sc": "^10.1.0",
     "babel-plugin-styled-components": "^1.10.1",

@@ -1,7 +1,11 @@
 ---
 title: Faster static site builds with Jenkins
-slug: faster-static-site-builds-with-jenkins
+slug: /posts/faster-static-site-builds-with-jenkins
 date: '2019-05-05'
+description: "One of the biggest drawbacks of static site generators is the time it takes for the content to update on the site. Long build times can be frustrating for content editors. Make your static site builds and deployments faster whenever the your content has changed, but your code hasn't."
+cardImage: 'https://images.unsplash.com/photo-1490303518801-b6433e57c353?ixlib=rb-1.2.1&q=90&fm=png&crop=entropy&w=800&h=200&fit=crop&ixid=eyJhcHBfaWQiOjF9'
+cardImageAuthor: '@dearseymour'
+coverImage: 'http://'
 ---
 
 # Faster static site builds with Jenkins
