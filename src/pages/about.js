@@ -54,6 +54,25 @@ const IndexPage = () => (
             .
           </p>
           <p>
+            Most of the images used in the blog posts are from{' '}
+            <a
+              href="https://unsplash.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              unsplash.com
+            </a>
+            . Also check out{' '}
+            <a
+              href="https://undraw.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              undraw.co
+            </a>{' '}
+            for some awesome SVG illustrations such as the one on this page.
+          </p>
+          <p>
             Read more about me and what I do on the{' '}
             <Link to="/">home page</Link>.
           </p>
