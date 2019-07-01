@@ -26,7 +26,7 @@ In our case it made sense to skip some of the build steps when running a build a
 
 #### Defining a Jenkins build parameter:
 
-```
+```groovy
 pipeline {
     parameters {
         booleanParam (
@@ -40,7 +40,7 @@ pipeline {
 
 #### Skipping a build step:
 
-```
+```groovy
 when { expression { return !params.CONTENT_BUILD } }
 steps {
     sh 'yarn e2e'
