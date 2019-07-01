@@ -92,6 +92,7 @@ const ImageCol = styled(Col)`
 `;
 
 const ContentCol = styled(Col)`
+  background-color: rgba(238, 241, 243, 0.7);
   font-size: 1rem;
   padding: 1rem;
   padding-right: 2rem;
