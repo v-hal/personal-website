@@ -8,9 +8,11 @@ module.exports = {
     github: 'https://github.com/v-hal',
     email: 'ville.halminen@gmail.com',
     medium: 'https://medium.com/@Zepro',
+    siteUrl: `https://halminen.dev`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
