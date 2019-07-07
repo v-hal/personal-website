@@ -4,6 +4,11 @@ import { Grid, Row, Col } from '@smooth-ui/core-sc';
 import { Link } from 'gatsby';
 import { addLeadingSlash } from '../utils/url';
 
+const isExternalUrl = url =>
+  (url && url.startsWith('http://')) || url.startsWith('https://');
+
+const defaultCardImg = 'https://source.unsplash.com/800x200/?code';
+
 const Card = ({
   title,
   date,
@@ -17,9 +22,15 @@ const Card = ({
     <Grid>
       <Row>
         <ImageCol xs={12}>
-          <CardLink to={addLeadingSlash(url)}>
-            <img src={cardImgUrl} alt="Blog post card" />
-          </CardLink>
+          {isExternalUrl(url) ? (
+            <a href={url} target="_blank" rel="noopener noreferrer">
+              <img src={cardImgUrl || defaultCardImg} alt="Blog post card" />
+            </a>
+          ) : (
+            <CardLink to={addLeadingSlash(url)}>
+              <img src={cardImgUrl || defaultCardImg} alt="Blog post card" />
+            </CardLink>
+          )}
           {cardImageAuthor && (
             <Author>
               <a
@@ -33,12 +44,25 @@ const Card = ({
           )}
         </ImageCol>
         <ContentCol>
-          <CardLink to={addLeadingSlash(url)}>
-            <h2>{title}</h2>
-          </CardLink>
+          {isExternalUrl(url) ? (
+            <a href={url} target="_blank" rel="noopener noreferrer">
+              <h2>{title}</h2>
+            </a>
+          ) : (
+            <CardLink to={url}>
+              <h2>{title}</h2>
+            </CardLink>
+          )}
+
           <DateSpan>{date}</DateSpan>
           <div dangerouslySetInnerHTML={{ __html: excerpt }}></div>
-          {tags && tags.map(t => <span>{t}</span>)}
+          {tags && (
+            <Tags>
+              {tags.map((t, i) => (
+                <Tag key={i}>{t}</Tag>
+              ))}
+            </Tags>
+          )}
         </ContentCol>
       </Row>
     </Grid>
@@ -105,7 +129,23 @@ const ContentCol = styled(Col)`
     margin-bottom: 0;
   }
 `;
+
+const Tags = styled.div`
+  margin-top: 1rem;
+`;
+
+const Tag = styled.span`
+  margin-right: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  line-height: 1.5;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+`;
+
 export const DateSpan = styled.span`
   opacity: 0.6;
 `;
+
 export default Card;

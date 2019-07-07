@@ -11,7 +11,7 @@ const Header = ({ siteTitle }) => (
   <StyledHeader>
     <Grid>
       <Row>
-        <HeaderCol xs={2} sm={8} md={9} left>
+        <HeaderCol xs={2} sm={8} md={9} left={true}>
           <Typography variant="h1">
             <MenuLink to="/">
               <LogoAndTitle>

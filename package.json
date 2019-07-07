@@ -21,6 +21,7 @@
     "gatsby-remark-prismjs": "^3.3.0",
     "gatsby-remark-smartypants": "^2.1.0",
     "gatsby-source-filesystem": "^2.1.0",
+    "gatsby-source-medium": "^2.1.0",
     "gatsby-transformer-remark": "^2.5.0",
     "gatsby-transformer-sharp": "^2.2.0",
     "prismjs": "^1.16.0",
@@ -46,6 +47,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "clean": "rm -rf .cache/ public/",
     "dev": "npm run develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
