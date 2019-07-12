@@ -131,17 +131,23 @@ const ContentCol = styled(Col)`
 `;
 
 const Tags = styled.div`
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 `;
 
 const Tag = styled.span`
+  font-size: 0.8rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
   margin-right: 0.5rem;
   padding: 0.375rem 0.75rem;
-  font-size: 1rem;
   border-radius: 0.25rem;
-  line-height: 1.5;
+  line-height: 1.4;
   background-color: white;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.55);
+  background-color: rgba(0, 0, 0, 0.028);
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.045);
+  }
 `;
 
 export const DateSpan = styled.span`
