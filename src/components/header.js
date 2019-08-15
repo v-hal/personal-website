@@ -70,7 +70,7 @@ const StyledHeader = styled.header`
 `;
 
 const MenuLink = styled(Link)`
-  color: #585858;
+  color: ${props => props.theme.mainGray};
   text-decoration: none;
   &:hover {
     opacity: 1;
