@@ -133,6 +133,9 @@ const ContentCol = styled(Col)`
   padding: 1rem;
   padding-right: 2rem;
   padding-left: 1rem;
+  a {
+    text-decoration: none;
+  }
 
   h2,
   h3 {
