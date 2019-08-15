@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row, Col } from '@smooth-ui/core-sc';
-import SVG from 'react-inlinesvg';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-const illustration1 = require('../images/svg/undraw_online_cv.svg');
 const faceImage = require('../images/vhal_1_1.jpg');
 
 const IndexPage = () => (

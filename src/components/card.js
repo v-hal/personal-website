@@ -16,6 +16,7 @@ const Card = ({
   tags,
   url,
   cardImgUrl,
+  cardImgAlt,
   cardImageAuthor,
 }) => (
   <StyledCard>
@@ -24,22 +25,33 @@ const Card = ({
         <ImageCol xs={12}>
           {isExternalUrl(url) ? (
             <a href={url} target="_blank" rel="noopener noreferrer">
-              <img src={cardImgUrl || defaultCardImg} alt="Blog post card" />
+              <img src={cardImgUrl || defaultCardImg} alt={cardImgAlt} />
             </a>
           ) : (
             <CardLink to={addLeadingSlash(url)}>
-              <img src={cardImgUrl || defaultCardImg} alt="Blog post card" />
+              <img src={cardImgUrl || defaultCardImg} alt={cardImgAlt} />
             </CardLink>
           )}
           {cardImageAuthor && (
             <Author>
-              <a
-                href={`https://unsplash.com/${cardImageAuthor}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Photo by {cardImageAuthor}
-              </a>
+              <span>
+                Photo by{' '}
+                <a
+                  href={`https://unsplash.com/${cardImageAuthor}?utm_source=halminen.dev&utm_medium=referral`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {cardImageAuthor}
+                </a>
+                {' on '}
+                <a
+                  href="https://unsplash.com/?utm_source=halminen.dev&utm_medium=referral"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Unsplash
+                </a>
+              </span>
             </Author>
           )}
         </ImageCol>
@@ -70,11 +82,11 @@ const Card = ({
 );
 
 const Author = styled.span`
-  a {
+  span,
+  span > a {
     color: rgba(255, 255, 255, 0.8);
-    font-size: 0.8rem;
     line-height: 1.5rem;
-    text-decoration: none;
+    font-size: 0.8rem;
   }
 
   line-height: 1.5rem;

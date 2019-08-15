@@ -4,7 +4,7 @@ import { Grid, Row, Col } from '@smooth-ui/core-sc';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const SecondPage = props => {
+const Post = props => {
   return (
     <Layout>
       <SEO title={props.data.markdownRemark.frontmatter.title} />
@@ -23,7 +23,7 @@ const SecondPage = props => {
   );
 };
 
-export default SecondPage;
+export default Post;
 export const query = graphql`
   query BlogPostBySlug($slug: String!) {
     site {

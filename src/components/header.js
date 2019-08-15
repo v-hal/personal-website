@@ -22,7 +22,7 @@ const Header = ({ siteTitle }) => (
           </Typography>
         </HeaderCol>
         <HeaderCol>
-          <MenuLink to="/posts">Blog</MenuLink>
+          <MenuLink to="/blog">Blog</MenuLink>
         </HeaderCol>
         <HeaderCol>
           <MenuLink to="/cv">CV</MenuLink>

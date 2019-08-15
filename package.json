@@ -25,6 +25,8 @@
     "gatsby-source-medium": "^2.1.0",
     "gatsby-transformer-remark": "^2.5.0",
     "gatsby-transformer-sharp": "^2.2.0",
+    "isomorphic-fetch": "^2.2.1",
+    "node-fetch": "^2.6.0",
     "prismjs": "^1.16.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -34,7 +36,8 @@
     "react-helmet": "^5.2.1",
     "react-inlinesvg": "^0.8.4",
     "react-ionicons": "^3.0.1",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "unsplash-js": "^5.0.0"
   },
   "devDependencies": {
     "gatsby-plugin-webpack-bundle-analyzer": "^1.0.5",
