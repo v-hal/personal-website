@@ -4,7 +4,8 @@ import { Grid, Row, Col } from '@smooth-ui/core-sc';
 import SVG from 'react-inlinesvg';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-const illustration1 = require('../images/svg/undraw_deliveries.svg');
+const illustration1 = require('../images/svg/undraw_online_cv.svg');
+const faceImage = require('../images/vhal_1_1.jpg');
 
 const IndexPage = () => (
   <Layout>
@@ -14,7 +15,7 @@ const IndexPage = () => (
         <Col>
           <div>
             <h1>Hi!</h1>
-            <Illustration src={illustration1} />
+            <Face src={faceImage} />
             <p>
               I’m a software developer at{' '}
               <a
@@ -83,14 +84,11 @@ const IndexPage = () => (
   </Layout>
 );
 
-const Illustration = styled(SVG)`
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  max-height: 18rem;
-  display: flex;
-  svg {
-    max-height: 18rem;
-  }
+const Face = styled.img`
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  height: 10rem;
+  border-radius: 50%;
 `;
 
 export default IndexPage;
