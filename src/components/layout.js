@@ -58,6 +58,10 @@ const Layout = ({ children }) => (
             />
             <meta name="msapplication-TileColor" content="#2d89ef" />
             <meta name="theme-color" content="#ffffff" />
+            <meta
+              name="google-site-verification"
+              content="WKpsBtplMom-nZKvi1jFdeM0hd7-rZI8Y3QyCN6sJf4"
+            />
           </Helmet>
           <Header siteTitle={data.site.siteMetadata.title} />
           <Main>{children}</Main>
