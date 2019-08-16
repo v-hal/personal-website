@@ -7,7 +7,10 @@ import SEO from '../components/seo';
 const Post = props => {
   return (
     <Layout>
-      <SEO title={props.data.markdownRemark.frontmatter.title} />
+      <SEO
+        title={props.data.markdownRemark.frontmatter.title}
+        description={props.data.markdownRemark.excerpt}
+      />
       <Grid>
         <Row>
           <Col>

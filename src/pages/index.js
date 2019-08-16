@@ -7,13 +7,17 @@ const faceImage = require('../images/vhal_1_1.jpg');
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Ville Halminen - A software developer located in Helsinki"
+      keywords={[`gatsby`, `application`, `react`]}
+      description="Ville Halminen - A web developer located in Helsinki"
+    />
     <Grid>
       <Row>
         <Col>
           <div>
             <h1>Hi!</h1>
-            <Face src={faceImage} />
+            <Face src={faceImage} alt="Photo of Ville" />
             <p>
               I’m a software developer at{' '}
               <a

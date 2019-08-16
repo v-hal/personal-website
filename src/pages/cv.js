@@ -13,7 +13,10 @@ const tentimesLogo = require('../images/Tentimes_Logo.png');
 
 const CV = () => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO
+      title="Ville Halminen - Curriculum Vitae"
+      description="Ville Halminen - Sofware Developer - Curriculum Vitae"
+    />
     <StyledCV className="cv">
       <Grid>
         <Row>

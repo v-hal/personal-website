@@ -54,7 +54,11 @@ const Blog = ({ pageContext }) => {
 
   return (
     <Layout>
-      <SEO title="Blog" keywords={[`blog`, `Ville Halminen`]} />
+      <SEO
+        title="Ville Halminen - Blog"
+        description="Personal blog about software development, technology and everything else remotely related."
+        keywords={[`blog`, `Ville Halminen`]}
+      />
       <Grid>
         <Row>
           <Col>
