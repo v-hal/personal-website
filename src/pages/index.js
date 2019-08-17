@@ -35,7 +35,7 @@ const IndexPage = () => (
               >
                 Helsinki
               </a>
-              . I build all sorts of modern web applications for organizations
+              . I build all sorts of modern web applications for clients
               in different industries.
             </p>
             <p>
