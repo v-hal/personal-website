@@ -4,20 +4,21 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: document
+  path: src/pages/index.js
+  label: Home
+  read_only: true
 - type: directory
-  path: ''
-  label: Everything
+  path: posts
+  label: Posts
   create: all
   match: "**/*"
 - type: document
   path: src/pages/about.js
   label: About
-- type: document
-  path: src/pages/index.js
-  label: Home
 - type: directory
-  path: posts
-  label: Posts
+  path: ''
+  label: Everything
   create: all
   match: "**/*"
 upload_dir: uploads
