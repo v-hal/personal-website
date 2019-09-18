@@ -9,18 +9,11 @@ sections:
   label: Pages
   create: all
   match: "**/*"
-- type: document
-  path: src/pages/index.js
-  label: Home
-  read_only: true
 - type: directory
   path: posts
   label: Posts
   create: all
   match: "**/*"
-- type: document
-  path: src/pages/about.js
-  label: About
 - type: directory
   path: ''
   label: Everything
