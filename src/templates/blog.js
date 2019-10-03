@@ -10,42 +10,22 @@ const postTypes = {
   local: 'local',
 };
 
-const getMediumUrl = slug => `https://medium.com/@Zepro/${slug}`;
+const renderCard = (post, i) => (
+  <Card
+    key={`post-${i}`}
+    title={post.title}
+    date={post.date}
+    excerpt={post.description}
+    tags={post.tags}
+    url={post.slug}
+    cardImgUrl={post.image.url}
+    cardImgAlt={post.image.alt}
+    cardImageAuthor={post.image.user.username}
+  />
+);
+
 const Blog = ({ pageContext }) => {
   const posts = pageContext.posts;
-  const renderCard = (post, i) => {
-    if (post.type === postTypes.medium) {
-      return (
-        <Card
-          key={`post-${i}`}
-          title={post.title}
-          date={post.date}
-          excerpt={post.virtuals.subtitle}
-          tags={post.virtuals.tags.map(t => t.name)}
-          url={getMediumUrl(post.uniqueSlug)}
-          cardImgUrl={post.image.url}
-          cardImgAlt={post.image.alt}
-          cardImageAuthor={post.image.user.username}
-        />
-      );
-    } else if (post.type === postTypes.local) {
-      return (
-        <Card
-          key={`post-${i}`}
-          title={post.title}
-          date={post.date}
-          excerpt={post.description}
-          tags={post.tags}
-          url={post.slug}
-          cardImgUrl={post.image.url}
-          cardImgAlt={post.image.alt}
-          cardImageAuthor={post.image.user.username}
-        />
-      );
-    }
-    return null;
-  };
-
   const Cards = styled.div`
     article {
       margin-top: 3rem;

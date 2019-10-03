@@ -5,7 +5,7 @@ export default {
   fontFamily: styleVariables.fontFamily,
   headerHeight: styleVariables.headerHeight,
   footerHeight: styleVariables.footerHeight,
-  mainGray: '#4d4d4d',
+  mainGray: '#3c3c3c',
   accent1: '#035592',
   accent2: '#28396f',
 

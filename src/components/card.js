@@ -92,8 +92,6 @@ const Author = styled.span`
   line-height: 1.5rem;
   position: relative;
   float: right;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
   padding-left: 0.4rem;
   padding-right: 0.4rem;
   top: -2.22rem;
@@ -106,7 +104,6 @@ const CardLink = styled(Link)`
 `;
 
 const StyledCard = styled.article`
-  border-radius: 5px;
   min-height: 300px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -118,8 +115,6 @@ const ImageCol = styled(Col)`
   padding-right: 0;
 
   img {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -128,7 +123,7 @@ const ImageCol = styled(Col)`
 `;
 
 const ContentCol = styled(Col)`
-  background-color: rgba(238, 241, 243, 0.7);
+  /* background-color: rgba(238, 241, 243, 0.7); */
   font-size: 1rem;
   padding: 1rem;
   padding-right: 2rem;

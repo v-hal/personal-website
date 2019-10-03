@@ -27,13 +27,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: `gatsby-source-medium`,
-      options: {
-        username: `@Zepro`,
-        limit: 200,
-      },
-    },
+
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

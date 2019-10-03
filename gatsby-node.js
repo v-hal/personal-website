@@ -98,20 +98,6 @@ const createBlog = async (graphql, createPage) => {
           }
         }
       }
-      allMediumPost {
-        nodes {
-          id
-          title
-          firstPublishedAt
-          uniqueSlug
-          virtuals {
-            subtitle
-            tags {
-              name
-            }
-          }
-        }
-      }
     }
   `);
   const { data } = graphqlResult;
@@ -130,7 +116,6 @@ const createBlog = async (graphql, createPage) => {
         data.allMarkdownRemark.nodes.map(p => p.frontmatter),
         postTypes.local
       ),
-      ...formatPosts(data.allMediumPost.nodes, postTypes.medium),
     ]
       .sort((a, b) => new Date(b.date) - new Date(a.date))
       .map(async (post, index) => {
