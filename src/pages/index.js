@@ -35,8 +35,19 @@ const IndexPage = () => (
               >
                 Helsinki
               </a>
-              . I build all sorts of modern web applications for clients
-              in different industries.
+              . I build all sorts of modern web applications for clients in
+              different industries.
+            </p>
+            <p>
+              Check out my brand new freelance software consultancy company{' '}
+              <a
+                href="https://www.fluubo.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Fluubo
+              </a>
+              .
             </p>
             <p>
               I’m currently working on web applications built with TypeScript,

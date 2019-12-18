@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import SVG from 'react-inlinesvg';
 import { Grid, Row, Col, Typography, Breakpoint } from '@smooth-ui/core-sc';
 import styleVariables from '../styles/variables';
@@ -35,6 +35,32 @@ const Header = ({ siteTitle }) => (
   </StyledHeader>
 );
 
+const underlineHoverEffect = css`
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: ${props => props.theme.accent1};
+    height: 4px;
+    transition-property: right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    &:before {
+      right: 0;
+    }
+  }
+`;
+
 const StyledHeader = styled.header`
   /* background-color: ${props => props.theme.$swatch_4}; */
   font-family: ${styleVariables.headingFontFamily};
@@ -55,9 +81,10 @@ const StyledHeader = styled.header`
     transition: color 0.2s linear;
     text-decoration: none;
     font-weight: 600;
-
+    /* color: ${props => props.theme.accent1}; */
     svg > path {
       transition: fill 0.2s linear;
+      /* fill: ${props => props.theme.accent1} !important; */
     }
 
     &:hover {
@@ -76,6 +103,7 @@ const MenuLink = styled(Link)`
     opacity: 1;
     text-decoration: none;
   }
+  ${underlineHoverEffect}
 `;
 
 const Logo = styled(SVG)`
