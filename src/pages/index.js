@@ -21,11 +21,11 @@ const IndexPage = () => (
             <p>
               I’m a software developer at{' '}
               <a
-                href="https://tentimesagency.com"
+                href="https://fluubo.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Tentimes agency
+                Fluubo
               </a>{' '}
               in{' '}
               <a
