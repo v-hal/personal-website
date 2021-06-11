@@ -3,12 +3,11 @@ const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 require('dotenv').config();
 require('isomorphic-fetch');
-const Unsplash = require('unsplash-js').default;
+const { createApi } = require('unsplash-js');
 const toJson = require('unsplash-js').toJson;
 const unsplashImages = require('./src/constants/unsplash-images');
-const unsplash = new Unsplash({
-  applicationId: process.env.UNSPLASH_ACCESS_KEY,
-  secret: process.env.UNSPLASH_SECRET_KEY,
+const unsplash = new createApi({
+  accessKey: process.env.UNSPLASH_ACCESS_KEY,
 });
 
 exports.createPages = async ({ graphql, actions }) => {
@@ -19,13 +18,13 @@ exports.createPages = async ({ graphql, actions }) => {
   return null;
 };
 
-const getUnsplashImage = (imageId, index) => {
-  if (imageId) {
-    return unsplash.photos.getPhoto(imageId, 800, 200).then(toJson);
+const getUnsplashImage = (photoId, index) => {
+  if (photoId) {
+    return unsplash.photos.get({ photoId }).then((x) => x.response);
   } else {
     return unsplash.photos
-      .getPhoto(unsplashImages[index], 800, 200)
-      .then(toJson);
+      .get({ photoId: unsplashImages[index] })
+      .then((x) => x.response);
   }
 };
 
@@ -48,7 +47,7 @@ const createBlogPosts = (graphql, createPage) => {
         }
       }
     `
-  ).then(result => {
+  ).then((result) => {
     if (result.errors) {
       throw result.errors;
     }
@@ -103,7 +102,7 @@ const createBlog = async (graphql, createPage) => {
   const { data } = graphqlResult;
 
   const formatPosts = (posts, type) =>
-    posts.map(p => ({ ...p, date: p.date || p.firstPublishedAt, type }));
+    posts.map((p) => ({ ...p, date: p.date || p.firstPublishedAt, type }));
 
   const postTypes = {
     medium: 'medium',
@@ -113,7 +112,7 @@ const createBlog = async (graphql, createPage) => {
   const posts = await Promise.all(
     [
       ...formatPosts(
-        data.allMarkdownRemark.nodes.map(p => p.frontmatter),
+        data.allMarkdownRemark.nodes.map((p) => p.frontmatter),
         postTypes.local
       ),
     ]
@@ -121,7 +120,7 @@ const createBlog = async (graphql, createPage) => {
       .map(async (post, index) => {
         const imageData = await getUnsplashImage(post.unsplashImageId, index);
         const image = {
-          url: imageData.urls.custom,
+          url: `${imageData.urls.full}&w=800&h=200&fit=crop`,
           alt: imageData.alt_description,
           user: {
             username: imageData.user.username,

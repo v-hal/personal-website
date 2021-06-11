@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import SVG from 'react-inlinesvg';
 import { Grid, Row, Col } from '@smooth-ui/core-sc';
-const notFound = require('../images/svg/undraw_startled.svg');
+import notFound from '../images/svg/undraw_startled.svg';
 
 const NotFoundPage = () => (
   <Layout>
