@@ -19,15 +19,7 @@ const IndexPage = () => (
             <h1>Hi!</h1>
             <Face src={faceImage} alt="Photo of Ville" />
             <p>
-              I’m a software developer at{' '}
-              <a
-                href="https://fluubo.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Fluubo
-              </a>{' '}
-              in{' '}
+              I’m a software developer located in{' '}
               <a
                 href="https://www.google.fi/maps/place/Helsinki/@37.4184233,30.9071716,3.79z/data=!4m5!3m4!1s0x46920bc796210691:0xcd4ebd843be2f763!8m2!3d60.1698557!4d24.9383791"
                 target="_blank"
