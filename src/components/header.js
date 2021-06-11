@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 import SVG from 'react-inlinesvg';
 import { Grid, Row, Col, Typography, Breakpoint } from '@smooth-ui/core-sc';
 import styleVariables from '../styles/variables';
-const logo = require('../images/logo2.svg');
+import logo from '../images/logo2.svg';
 
 const Header = ({ siteTitle }) => (
   <StyledHeader>
@@ -45,7 +45,7 @@ const underlineHoverEffect = css`
     left: 0;
     right: 100%;
     bottom: 0;
-    background: ${props => props.theme.accent1};
+    background: ${(props) => props.theme.accent1};
     height: 4px;
     transition-property: right;
     transition-duration: 0.3s;
@@ -62,12 +62,12 @@ const underlineHoverEffect = css`
 `;
 
 const StyledHeader = styled.header`
-  /* background-color: ${props => props.theme.$swatch_4}; */
+  /* background-color: ${(props) => props.theme.$swatch_4}; */
   font-family: ${styleVariables.headingFontFamily};
   padding-left: 1rem;
   padding-right: 1rem;
   box-sizing: border-box;
-  height: ${props => props.theme.headerHeight};
+  height: ${(props) => props.theme.headerHeight};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -81,23 +81,23 @@ const StyledHeader = styled.header`
     transition: color 0.2s linear;
     text-decoration: none;
     font-weight: 600;
-    /* color: ${props => props.theme.accent1}; */
+    /* color: ${(props) => props.theme.accent1}; */
     svg > path {
       transition: fill 0.2s linear;
-      /* fill: ${props => props.theme.accent1} !important; */
+      /* fill: ${(props) => props.theme.accent1} !important; */
     }
 
     &:hover {
-      color: ${props => props.theme.accent1};
+      color: ${(props) => props.theme.accent1};
       svg > path {
-        fill: ${props => props.theme.accent1} !important;
+        fill: ${(props) => props.theme.accent1} !important;
       }
     }
   }
 `;
 
 const MenuLink = styled(Link)`
-  color: ${props => props.theme.mainGray};
+  color: ${(props) => props.theme.mainGray};
   text-decoration: none;
   &:hover {
     opacity: 1;
@@ -107,17 +107,15 @@ const MenuLink = styled(Link)`
 `;
 
 const Logo = styled(SVG)`
-  margin-top: 0.4rem;
+  margin-top: -0.1rem;
   margin-right: 0.6rem;
-  svg {
-    width: 2rem;
-  }
+  width: 2rem;
 `;
 
 const HeaderCol = styled(Col)`
   display: flex;
   align-items: center;
-  ${props =>
+  ${(props) =>
     props.left ||
     `
     justify-content: center;

@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import { Grid, Row, Col, Button } from '@smooth-ui/core-sc';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-const cvImage = require('../images/vhal.jpg');
-const futuriceLogo = require('../images/Futurice_Logo_Black.png');
-const hiqLogo = require('../images/HiQ_Logo_Black.jpg');
-const kehatietoLogo = require('../images/Kehatieto_Logo_Black.png');
-const lutLogo = require('../images/LUT_Logo_Black_.png');
-const hhLogo = require('../images/Haaga-Helia_Logo_Black_.png');
-const tentimesLogo = require('../images/Tentimes_Logo.png');
+import cvImage from '../images/vhal.jpg';
+import futuriceLogo from '../images/Futurice_Logo_Black.png';
+import hiqLogo from '../images/HiQ_Logo_Black.jpg';
+import kehatietoLogo from '../images/Kehatieto_Logo_Black.png';
+import lutLogo from '../images/LUT_Logo_Black_.png';
+import hhLogo from '../images/Haaga-Helia_Logo_Black_.png';
+import tentimesLogo from '../images/Tentimes_Logo.png';
 
 const CV = () => (
   <Layout>

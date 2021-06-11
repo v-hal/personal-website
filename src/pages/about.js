@@ -5,7 +5,7 @@ import { Grid, Row, Col } from '@smooth-ui/core-sc';
 import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-const illustration1 = require('../images/svg/undraw_coffee_break.svg');
+import illustration1 from '../images/svg/undraw_coffee_break.svg';
 
 const IndexPage = () => (
   <Layout>

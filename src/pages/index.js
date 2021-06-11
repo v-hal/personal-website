@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Grid, Row, Col } from '@smooth-ui/core-sc';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-const faceImage = require('../images/vhal_1_1.jpg');
+import faceImage from '../images/vhal_1_1.jpg';
 
 const IndexPage = () => (
   <Layout>
